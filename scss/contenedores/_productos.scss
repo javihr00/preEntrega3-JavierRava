@@ -1,0 +1,76 @@
+// PRODUCTOS
+
+    /* Main Productos  */
+
+#idBoxCafeBrasil{
+    @include productosCafeStyles($colorCafeBrasil)
+}
+
+#idBoxCafeColombia{
+    @include productosCafeStyles($colorCafeColombia)
+}
+
+#idBoxCafeMoka{
+    @include productosCafeStyles($colorCafeMoka)
+}
+
+#idBoxCafeItaliano{
+    @include productosCafeStyles($colorCafeItaliano)
+}
+
+
+.boxCafeImage{
+    width: 50%;
+}
+
+.cafeImage{
+    width: 100%;
+    max-width: 350px;
+    padding: 3%;
+    display: block;
+    margin: 0 auto;
+}
+
+.boxCafeText{
+    width: 50%;
+}
+
+.cafeText{
+    background-color: rgba(0, 0, 0, 0.10);
+    margin: 3% 0;
+    padding: 5%;
+    width: 95%;
+    
+    ul{
+        li{
+            font-size: 1rem;
+        }
+    }
+}
+
+
+/* main Productos @media */
+
+@media screen and (min-width:700px){
+    .cafeText{
+        width: 65%;
+    }
+
+    ul{
+        li{
+            font-size: 1.2rem; 
+        }
+    }
+}
+
+@media screen and (max-width:500px){
+    .boxCafeImage, .boxCafeText{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cafeText{
+        margin: 0.5% 4% 4% 4%;
+    }
+}

@@ -1,0 +1,38 @@
+// QUIENES SOMOS
+
+    /* main quienessomos */
+
+.mainQuienessomos{
+    display: flex;
+    justify-content: center;
+
+    .boxQuienessomos{
+        @extend %sombraIntensidad2;
+        margin: 1% 2% 2%;
+        padding: 0px 30px;
+        max-width: 1000px;
+        background-color: rgb(245, 245, 245);
+
+        p{
+            text-align: center;
+            margin: 30px 0px;
+            font-size: 1.1rem;
+            font-weight: 500;    
+        }
+
+        #idTextqs1, #idTextqs3{
+            color: $colorMarronClaro
+        }
+
+        #idTextqs2, #idTextqs4{
+            color: $colorMarronOscuro
+        }
+
+        img{
+            width: 100%;
+            max-width: 250px;
+            display: block;
+            margin: 50px auto 20px;
+        }
+    }
+}

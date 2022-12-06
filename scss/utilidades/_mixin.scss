@@ -1,0 +1,12 @@
+// Mixin con params
+
+    // > productos
+@mixin productosCafeStyles ($colorProductosCafe){
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: $colorProductosCafe;
+    background-image: $imgMapaFondo;
+    background-size: cover;
+    background-position: center;
+}

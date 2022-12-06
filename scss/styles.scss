@@ -1,0 +1,201 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Open Sans;
+}
+
+
+// Anexos SCSS
+
+@import "utilidades/variables";
+@import "utilidades/mixin";
+@import "utilidades/extend";
+@import "contenedores/headerFooter";
+@import "contenedores/productos";
+@import "contenedores/locales";
+@import "contenedores/comunidad";
+@import "contenedores/quienessomos";
+@import "contenedores/contacto";
+
+
+/* BODY */
+
+body{
+    background-image: $bgBodyGeneral;
+    background-size: 945px 600px;
+}
+
+/* MAIN */
+
+h1{
+    text-align: center;
+    margin: 30px 0px;
+    font-family: Amatic SC, Open Sans;
+    font-size: 64px;
+}
+
+    /* Main Index */
+
+.mainIndex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* > main index > seccion principal */
+#idImgPriIndex{
+    display: block;
+    width: 100%;
+    height: 400px;
+    background-image: $imgBannerIndex;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.mainIndexPrincipal{
+
+    h1{
+        text-align: center; 
+    }
+    p{
+        text-align: center;
+        span{
+            font-style: italic;
+            font-weight: bold;
+        }
+    }
+}
+
+        /* > main index > seccion secundaria */
+.mainIndexSecundaria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 50px 0px 0px 0px;
+    gap: 50px;
+    
+    div{
+        @extend %sombraIntensidad1;
+        margin: 20px 10px;
+        width: 450px;
+        height: 200px;
+        transition: 0.4s;
+    }
+
+    div:hover{
+        transform: scale(1.05);
+        transition: 0.4s;
+        box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.30);
+    }
+
+    p{
+        background-color: rgba(255, 255, 255, 0.75);
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.75); 
+        width: 250px;
+        min-width: 250px;
+        font-weight: bold;
+        position: relative;
+        left: 10px;
+        top: 10px;
+        padding: 5px 10px;
+    }
+
+    a{
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.indexBoxSpanText{
+    display:block;
+    font-size: 1.5rem;
+}
+
+.indexBoxProductos{
+    background-image: $imgIndexProductos;
+}
+.indexBoxLocales{
+    background-image: $imgIndexLocales;
+}
+.indexBoxComunidad{
+    background-image: $imgIndexComunidad;
+}
+.imgBox{
+    background-size: cover;
+    background-position: center;
+}
+
+    /* Main Index (@media) */
+
+@media screen and (min-width:500px){
+    .mainIndexSecundaria500px{
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px){
+
+    #idImgPriIndex{
+        width: 100%;
+        max-height: 300px;
+    }
+
+    .mainIndexPrincipal{
+        h1{
+            font-size: 3em;
+        }
+        p{
+            font-size: 16px;
+            margin: 0px 30px 30px 30px;
+        }
+    }
+
+    .mainIndexSecundaria{
+        display:none;
+    }
+
+    .mainIndexSecundaria500px{
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        width: 80%;
+        min-width: 30%;
+
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 1.2rem;       
+            font-weight: 500;
+
+            div{
+                height: 140px;
+
+                p{
+                    background-color: rgba(255, 255, 255, 0.70);
+                    display: inline-block;
+                    width: 100%;
+                    max-width: 125px;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
